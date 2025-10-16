@@ -3,8 +3,6 @@ import logo from '../../assets/images/logo_li_claim_2019_negativ.png'
 import img from '../../assets/images/lifestyle-immobilien-team-1.webp'
 
 const Footer = () => {
-
-
 	return (
 		<footer className='footer'>
 			<div className='footer_inner'>

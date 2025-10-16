@@ -14,6 +14,10 @@ $content-width: 850px;
 .animatedIsometry {
 	width: $content-width;
 	margin: 98px auto;
+
+	@include md-max {
+		width: 100%;
+	}
 }
 
 .animatedIsometry__inner {
@@ -84,6 +88,10 @@ $content-width: 850px;
 	background: $beige;
 	border-radius: 12px;
 	padding: 20px 20px 40px 20px;
+
+	@include md-max {
+		width: 80%;
+	}
 
 	table {
 		width: 100%;

@@ -16,7 +16,6 @@ function App() {
 				<Highlights />
 				<TextImage />
 				<AnimatedIsometry />
-
 				<Map />
 			</div>
 			<Footer />
