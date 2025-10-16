@@ -1,0 +1,124 @@
+@import '../../assets//styles//breakpoints.scss';
+
+$beige: rgba(129, 105, 76, 0.1);
+$color-grey: #666666;
+$color-hover: rgba(#f1af00, 0.1);
+$yellow: #f1af01;
+$content-width: 850px;
+
+.table {
+	background: $beige;
+	width: 50%;
+}
+
+.animatedIsometry {
+	width: $content-width;
+	margin: 98px auto 0;
+}
+
+.animatedIsometry__inner {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 100px;
+
+	@include md-max {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.animatedIsometry__svg {
+	width: 50%;
+	overflow: auto;
+
+	@include md-max {
+		width: 70%;
+	}
+
+	svg a[data-row] {
+		cursor: pointer;
+	}
+
+	a.is-active {
+		.cls-1,
+		.cls-2,
+		.cls-3,
+		.cls-4,
+		.cls-5,
+		.cls-6,
+		polygon,
+		path,
+		rect {
+			fill: $yellow;
+
+			transition: fill 0.2s ease, stroke 0.2s ease;
+		}
+	}
+}
+
+.animatedIsometry__table {
+	width: 50%;
+	background: $beige;
+	border-radius: 12px;
+	padding: 20px 20px 40px 20px;
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	th,
+	td {
+		padding: 0.6rem 0.8rem;
+		text-align: left;
+		border-bottom: 1px solid $color-grey;
+	}
+
+	tr {
+		border-bottom: 1px solid $color-grey;
+	}
+
+	th {
+		font-weight: 400;
+	}
+
+	.is-active {
+		background: $color-hover;
+	}
+}
+
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6 {
+	stroke: #fff;
+	stroke-miterlimit: 10;
+	stroke-width: 0.6px;
+}
+
+.cls-1 {
+	fill: #2e91bf;
+}
+.cls-2 {
+	fill: #2f91bf;
+}
+.cls-3 {
+	fill: #c5c7c7;
+}
+.cls-4 {
+	fill: #b1b3b3;
+}
+.cls-5 {
+	fill: #9d9e9e;
+}
+.cls-6 {
+	fill: #287da4;
+}
+.cls-7 {
+	isolation: isolate;
+}

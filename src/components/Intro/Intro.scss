@@ -1,0 +1,24 @@
+@import '../../assets//styles//breakpoints.scss';
+
+$content-width: 850px;
+
+.intro {
+	@include md-max {
+		margin-bottom: 98px;
+	}
+	@include md-min {
+		width: $content-width;
+		margin: 0 auto;
+	}
+}
+
+.intro_text {
+	font-size: 18px;
+	line-height: 29px;
+	margin-bottom: 20px;
+	font-weight: 300;
+}
+
+.intro_text b {
+	font-weight: bold;
+}
