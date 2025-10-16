@@ -675,7 +675,6 @@ const AnimatedIsometry = () => {
 					</svg>
 					{/* prettier-ignore-end */}
 				</div>
-
 				<div className='animatedIsometry__table'>
 					<table>
 						<thead>
