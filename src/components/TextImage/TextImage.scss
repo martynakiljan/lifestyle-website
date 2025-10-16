@@ -9,16 +9,16 @@ $color-brown: #3d3a36;
 	display: flex;
 	gap: 64px;
 	align-items: center;
-	margin: 140px auto;
+	margin: 100px auto;
 
 	@include md-max {
 		flex-direction: column;
 		align-items: flex-start;
-		margin: 100px auto;
 	}
 
 	@include md-min {
 		width: $content-width;
+		margin-top: 0;
 	}
 }
 
@@ -38,6 +38,11 @@ $color-brown: #3d3a36;
 img {
 	width: 100%;
 	border-radius: 12px;
+	object-fit: cover;
+
+	@include md-min {
+		max-height: 400px;
+	}
 }
 
 .textimage_address {

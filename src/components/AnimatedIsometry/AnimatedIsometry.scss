@@ -1,4 +1,4 @@
-@import '../../assets//styles//breakpoints.scss';
+@import '../../assets/styles/breakpoints.scss';
 
 $beige: rgba(129, 105, 76, 0.1);
 $color-grey: #666666;
@@ -13,7 +13,7 @@ $content-width: 850px;
 
 .animatedIsometry {
 	width: $content-width;
-	margin: 98px auto 0;
+	margin: 98px auto;
 }
 
 .animatedIsometry__inner {
@@ -24,7 +24,6 @@ $content-width: 850px;
 	gap: 100px;
 
 	@include md-max {
-		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 	}
@@ -33,28 +32,49 @@ $content-width: 850px;
 .animatedIsometry__svg {
 	width: 50%;
 	overflow: auto;
+	overflow: visible;
 
 	@include md-max {
 		width: 70%;
 	}
 
-	svg a[data-row] {
-		cursor: pointer;
-	}
+	svg {
+		display: block;
+		overflow: visible;
 
-	a.is-active {
-		.cls-1,
-		.cls-2,
-		.cls-3,
-		.cls-4,
-		.cls-5,
-		.cls-6,
-		polygon,
-		path,
-		rect {
-			fill: $yellow;
+		a[data-row] {
+			cursor: pointer;
+			transform-box: fill-box;
+			transform-origin: center;
+			transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.25s ease, opacity 0.2s ease;
+			will-change: transform;
 
-			transition: fill 0.2s ease, stroke 0.2s ease;
+			&:hover {
+				filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.18));
+			}
+
+			&.is-active {
+				transform: translate(22px, 18px) scale(1.02);
+				filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.28));
+
+				.cls-1,
+				.cls-2,
+				.cls-3,
+				.cls-4,
+				.cls-5,
+				.cls-6,
+				polygon,
+				path,
+				rect {
+					fill: $yellow;
+					transition: fill 0.2s ease, stroke 0.2s ease;
+				}
+
+				&:hover {
+					transform: translate(22px, 18px) scale(1.02);
+					filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.28));
+				}
+			}
 		}
 	}
 }

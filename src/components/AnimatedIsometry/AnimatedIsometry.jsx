@@ -10,7 +10,9 @@ const AnimatedIsometry = () => {
 
 		e.preventDefault()
 		const row = link.getAttribute('data-row')
-		if (row) setActiveRow(row)
+		if (!row) return
+
+		setActiveRow(prev => (prev === row ? null : row))
 	}
 	return (
 		<div className='animatedIsometry'>
@@ -27,6 +29,7 @@ const AnimatedIsometry = () => {
 						data-name='Ebene 1'
 						version='1.1'
 						viewBox='0 0 442.3 411.8'
+						style={{ overflow: 'visible' }}
 					>
 						<g id='EG'>
 							<g id='whg4003'>

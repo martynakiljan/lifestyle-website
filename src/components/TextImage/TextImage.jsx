@@ -15,7 +15,8 @@ const TextImage = () => {
 			<div className='textimage_col textimage_text'>
 				<h2 className='title-h2'>Leben am Zürichsee</h2>
 				<p className='textimage_p'>
-					Lachen SZ bietet mit seiner Nähe zum Zürichsee, der hervorragenden Infrastruktur
+					Lachen SZ bietet mit seiner Nähe zum Zürichsee, der 
+					hervorragenden Infrastruktur
 					<br></br>und zahlreichen Freizeitmöglichkeiten ein Wohnumfeld, das <br></br>urbanes Leben und naturnahe
 					Erholung ideal vereint. Ob für Singles, Paare <br></br>oder Familien –Twelve ist ein Zuhause, das den Alltag
 					zur Nebensache macht.

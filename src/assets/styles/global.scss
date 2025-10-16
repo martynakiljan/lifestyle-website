@@ -1,6 +1,6 @@
 @import './reset.scss';
 @import './breakpoints.scss';
-
+$main: #3d3a36;
 $bronze: #81694c;
 $orange: #f1af00;
 $content-width: 850px;
@@ -12,6 +12,7 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
+	color: $main;
 }
 
 .website-container {
